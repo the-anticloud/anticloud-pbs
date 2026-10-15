@@ -1,0 +1,123 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:e196103d-c00e-5a63-8fba-07813ff4ee67",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-08T20:36:42Z",
+    "component": {
+      "type": "application",
+      "name": "PBS",
+      "version": "83b357604d34",
+      "bom-ref": "pkg:generic/anticloud/PBS@83b357604d34",
+      "purl": "pkg:generic/anticloud/PBS@83b357604d34",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": ""
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "pytest",
+      "version": ">= 2.7.1",
+      "purl": "pkg:pypi/pytest@2.7.1",
+      "bom-ref": "pypi/pytest@>= 2.7.1"
+    },
+    {
+      "type": "library",
+      "name": "jobqueue",
+      "version": "unspecified",
+      "purl": "pkg:generic/jobqueue",
+      "bom-ref": "conda/jobqueue@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "conda-forge",
+      "version": "unspecified",
+      "purl": "pkg:generic/conda-forge",
+      "bom-ref": "conda/conda-forge@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "nodefaults",
+      "version": "unspecified",
+      "purl": "pkg:generic/nodefaults",
+      "bom-ref": "conda/nodefaults@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "python",
+      "version": "3.10",
+      "purl": "pkg:generic/python@3.10",
+      "bom-ref": "conda/python@3.10"
+    },
+    {
+      "type": "library",
+      "name": "dask",
+      "version": "unspecified",
+      "purl": "pkg:generic/dask",
+      "bom-ref": "conda/dask@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "distributed",
+      "version": "unspecified",
+      "purl": "pkg:generic/distributed",
+      "bom-ref": "conda/distributed@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "flake8",
+      "version": "unspecified",
+      "purl": "pkg:generic/flake8",
+      "bom-ref": "conda/flake8@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "black",
+      "version": "unspecified",
+      "purl": "pkg:generic/black",
+      "bom-ref": "conda/black@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "pytest",
+      "version": "unspecified",
+      "purl": "pkg:generic/pytest",
+      "bom-ref": "conda/pytest@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "pytest-asyncio",
+      "version": "unspecified",
+      "purl": "pkg:generic/pytest-asyncio",
+      "bom-ref": "conda/pytest-asyncio@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "cryptography",
+      "version": "unspecified",
+      "purl": "pkg:generic/cryptography",
+      "bom-ref": "conda/cryptography@unspecified"
+    }
+  ]
+}
