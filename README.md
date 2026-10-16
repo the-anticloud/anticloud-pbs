@@ -1,14 +1,12 @@
 # PBS
 
-> Deploy Dask on Job Queueing systems |Build Status| |Doc Status| |Version Status|
+> A suboptimal solver for Multi-Agent Path Finding Priority-Based Search (PBS) is an efficient suboptimal algorithm for solving Multi-Agent Path Finding (MAPF). More details can be found in our paper at AAAI 2019 [1]. (This implementation is not the original code for producing the results in the paper.)
 
-**Category:** SUPERCOMPUTER · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/openpbs/openpbs · **Pinned commit:** `cd7ab5edaf03dcac2f1cb9e2f42d75eb117d468a` · **Vendor:** Anticloud FZ LLE
-
-> **Note:** this package vendors `https://github.com/openpbs/openpbs` as the implementation for the `PBS` slot. The vendored repository name differs from the package name; the pin above is the exact commit vendored here.
+**Category:** SUPERCOMPUTER · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/Jiaoyang-Li/PBS · **Pinned commit:** `d7b91fa5abdbb1376e8fc2cffa995a84eac811df` · **Vendor:** Anticloud FZ LLE
 
 ## What This Project Is
 
-Deploy Dask on Job Queueing systems |Build Status| |Doc Status| |Version Status|
+A suboptimal solver for Multi-Agent Path Finding Priority-Based Search (PBS) is an efficient suboptimal algorithm for solving Multi-Agent Path Finding (MAPF). More details can be found in our paper at AAAI 2019 [1]. (This implementation is not the original code for producing the results in the paper.)
 
 This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
@@ -20,7 +18,34 @@ This is the upstream project, vendored at the pinned commit above and packaged o
 
 ## Usage
 
-See the upstream README (linked above) for usage. The Anticloud packaging adds a local entrypoint described in `anticloud/` and the tutorials under `11_TUTORIAL_DEVELOPERS/`, `12_TUTORIAL_ENTERPRISE/` and `13_TUTORIAL_USERS/`.
+The code requires the external library [boost](https://www.boost.org/).
+If you are using Ubantu, you can install it simply by
+```shell script
+sudo apt install libboost-all-dev
+```
+Another easy way of installing the boost library is to install anaconda/miniconda and then
+```shell script
+conda install -c anaconda libboost
+```
+which works for a variety of [systems](https://anaconda.org/anaconda/libboost)
+(including linux, osx, and win).
+
+If neither of the above method works, you can also follow the instructions
+on the [boost](https://www.boost.org/) website and install it manually.
+
+
+After you installed boost and downloaded the source code, go into the directory of the source code and compile it with CMake:
+```shell script
+cmake -DCMAKE_BUILD_TYPE=RELEASE .
+make
+```
+
+Then, you are able to run the code:
+```
+./pbs -m random-32-32-20.map -a random-32-32-20-random-1.scen -o test.csv --outputPaths=paths.txt -k 50 -t 60
+```
+
+- m: the map file from the MAPF benchmark
 
 ## Anticloud Overlay
 
@@ -62,7 +87,7 @@ The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The 
 SHA3-256 of `BENCH.json`:
 
 ```
-3751b1230129d431ed96a0a224df2f1ced8af501f2b2dc095711620457418d08
+8fb18a187a7c49dee4ac16b03f7852dadb53508c6abadf3d1047a5743de96a88
 ```
 
 Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.

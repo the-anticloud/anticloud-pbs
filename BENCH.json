@@ -540,9 +540,10 @@
  "version": "1.0.0",
  "source": {
   "git": {
-   "head": "cd7ab5edaf03dcac2f1cb9e2f42d75eb117d468a",
-   "url": "https://github.com/openpbs/openpbs",
-   "sha_verified_from": "fix71.json/resolved"
+   "url": "https://github.com/Jiaoyang-Li/PBS",
+   "head": "d7b91fa5abdbb1376e8fc2cffa995a84eac811df",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/openpbs/openpbs"
   }
  }
 }
